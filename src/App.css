@@ -12,7 +12,7 @@ ul, li {
   line-height: 2;
 }
 
-a {
+li a {
   display: block;
   font-size: 2rem;
 }
