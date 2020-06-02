@@ -17,7 +17,7 @@ ul, li {
 
 li {
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -34,6 +34,7 @@ a {
 li span {
   display: block;
   font-size: .8rem;
+  opacity: .5;
 }
 
 .big:hover {
@@ -45,4 +46,5 @@ p {
   padding: 20px;
   max-width: 500px;
   margin: 50px auto;
+  line-height: 1.4;
 }

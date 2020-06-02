@@ -33,7 +33,11 @@ function App() {
  
   return (
     <div className="App">
-      <p>A list of Black-owned restaurants in various cities.</p>
+      <p>
+        A list of Black-owned restaurants in various cities.
+        <br />
+        Order directly & tip generously.
+      </p>
       <ul>
         {
           listings ?
@@ -44,8 +48,10 @@ function App() {
 
       <p>
         Actively adding more (that I find via Twitter) but hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> to submit.
-
+        <br />
         Want to add updates yourself? <a href="https://docs.google.com/spreadsheets/d/1EVyWgRbpDgN2CLoe-uMWYYxnF1YODF5bBX-pNuEDGKM/edit#gid=0">Click Here</a>
+        <br />
+        Want to support the fight for justice? <a href="https://www.theverge.com/21277358/protests-donate-police-bail-demonstrations-minneapolis-nyc">Click Here</a>
       </p>
     </div>
   );
