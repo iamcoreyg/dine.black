@@ -1,9 +1,13 @@
 html, body {
   font-size: 16px;
+  background: #111;
+  color: #fff;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .App {
   text-align: center;
+  padding-top: 50px;
 }
 
 ul, li {
@@ -15,9 +19,12 @@ ul, li {
 
 li a {
   display: block;
-  font-size: 2rem;
+  font-size: 1.75rem;
+  color: #fff;
 }
 
 p {
   padding: 20px;
+  max-width: 500px;
+  margin: auto;
 }
