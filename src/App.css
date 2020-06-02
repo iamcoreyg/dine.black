@@ -63,7 +63,10 @@ h1, h2 {
 }
 
 .listings {
-  padding: 20px 0 0;
+  padding: 50px 0 0;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
 }
 
 @media(min-width: 768px) {
