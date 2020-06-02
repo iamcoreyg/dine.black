@@ -1,8 +1,17 @@
 html, body {
   font-size: 16px;
-  background: #111;
+  background: #1c1c1d;
   color: #fff;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.title {
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  display: inline-block;
+  padding: 12px 20px;
+  background: #000;
+  font-size: 12px;
 }
 
 .App {

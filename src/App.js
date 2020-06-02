@@ -33,6 +33,7 @@ function App() {
  
   return (
     <div className="App">
+      <span className="title">DINE.BLACK</span>
       <h1>Lists of Black-owned restaurants in various cities.</h1>
       <h2>Order directly & tip generously.</h2>
 
