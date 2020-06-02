@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      
+      <p>A list of Black-owned restaurants in various cities.</p>
       <ul>
         <li><a href="https://docs.google.com/spreadsheets/u/0/d/1cPKzlmzp-KIDEeR3IXe14lB_kzlj_acHCvWluQRN--w/htmlview#gid=0">Austin</a></li>
         <li><a href="https://docs.google.com/spreadsheets/u/1/d/1mTthE5lwqVnTCIm3iQtQXLyxwK-pc17cuCp--BhAYX8/htmlview">Bay Area</a></li>
@@ -18,7 +18,7 @@ function App() {
         <li><a href="https://docs.google.com/document/d/10l7NItyZUoNroE4iLePGn5GAvSuQ7KW5IK4XmOcDSTI/mobilebasic">Toronto</a></li>
       </ul>
 
-      <p>A list of Black-owned restaurants in various cities – actively adding more (that I find via Twitter) but hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> if I'm missing some.</p>
+      <p>Actively adding more (that I find via Twitter) but hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> if I'm missing some.</p>
     </div>
   );
 }
