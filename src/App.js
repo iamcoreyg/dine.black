@@ -33,12 +33,10 @@ function App() {
  
   return (
     <div className="App">
-      <p>
-        A list of Black-owned restaurants in various cities.
-        <br />
-        Order directly & tip generously.
-      </p>
-      <ul>
+      <h1>Lists of Black-owned restaurants in various cities.</h1>
+      <h2>Order directly & tip generously.</h2>
+
+      <ul class="listings">
         {
           listings ?
            listings.map((listing) => <Listing listing={listing} />)
