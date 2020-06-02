@@ -48,8 +48,8 @@ li span {
 }
 
 .big:hover {
-  color: green;
-  border-bottom: 2px solid green;
+  color: #56b63a;
+  border-bottom: 2px solid #56b63a;
 }
 
 p {
