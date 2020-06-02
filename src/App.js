@@ -11,7 +11,11 @@ const Listing = (props) => {
   return (
     <li>
       <a className="big" href={link}>{city}</a>
-      <span>Managed by <a href={`https://twitter.com/@${credit}`}>{credit}</a></span>
+      {
+        credit ? 
+        <span>Managed by <a href={`https://twitter.com/@${credit}`}>{credit}</a></span>
+        : ''
+      }
     </li>
   )
 }
