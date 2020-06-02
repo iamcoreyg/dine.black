@@ -6,14 +6,14 @@ import axios from 'axios'
 import './App.css';
 
 const Listing = (props) => {
-  const { city, credit, link } = props.listing
+  const { city, credit, link, socialplatform } = props.listing
 
   return (
     <li>
       <a className="big" href={link} target="_blank">{city}</a>
       {
         credit ? 
-        <span>Creator ~ <a href={`https://twitter.com/${credit}`} target="_blank">@{credit}</a></span>
+        <span>Creator ~ <a href={`https://${socialplatform}.com/${credit}`} target="_blank">@{credit}</a></span>
         : ''
       }
     </li>
