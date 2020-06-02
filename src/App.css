@@ -6,7 +6,8 @@ html, body {
 }
 
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 30px;
 }
 
 ul, li {
@@ -43,7 +44,6 @@ li span {
 }
 
 p {
-  padding: 20px;
   max-width: 500px;
   margin: 50px auto;
   line-height: 1.4;
@@ -67,6 +67,11 @@ h1, h2 {
 }
 
 @media(min-width: 768px) {
+  .App {
+    text-align: center;
+    padding: 30px;
+  }
+
   li {
     display: inline-block;
     width: 25%;
