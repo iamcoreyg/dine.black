@@ -51,7 +51,7 @@ function App() {
         <br />
         Want to add updates yourself? <a href="https://docs.google.com/spreadsheets/d/1EVyWgRbpDgN2CLoe-uMWYYxnF1YODF5bBX-pNuEDGKM/edit#gid=0">Click Here</a>
         <br />
-        Want to support the fight for justice? <a href="https://www.theverge.com/21277358/protests-donate-police-bail-demonstrations-minneapolis-nyc">Click Here</a>
+        Want to support the fight for justice? <a href="https://docs.google.com/document/d/1jsCO7zuVvpj4gWyheDZ1jH2i83hVUsYLjEhsLnl9-8c/edit">Click Here</a>
       </p>
     </div>
   );
