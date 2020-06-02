@@ -73,7 +73,7 @@ h1, h2 {
 
 .listings {
   padding: 50px 0 0;
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
   text-align: left;
 }
@@ -89,6 +89,7 @@ h1, h2 {
     width: 25%;
     vertical-align: top;
     margin-bottom: 20px;
+    padding: 10px;
   }
 
   .big {
