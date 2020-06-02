@@ -17,3 +17,7 @@ li a {
   display: block;
   font-size: 2rem;
 }
+
+p {
+  padding: 20px;
+}
