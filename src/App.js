@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <p>A list of Black-owned restaurants in various cities – hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> to get more added here.</p>
       <ul>
         <li><a href="https://docs.google.com/spreadsheets/u/0/d/1cPKzlmzp-KIDEeR3IXe14lB_kzlj_acHCvWluQRN--w/htmlview#gid=0">Austin</a></li>
         <li><a href="https://docs.google.com/spreadsheets/u/1/d/1mTthE5lwqVnTCIm3iQtQXLyxwK-pc17cuCp--BhAYX8/htmlview">Bay Area</a></li>
