@@ -17,9 +17,15 @@ ul, li {
 }
 
 li a {
-  display: block;
   font-size: 1.75rem;
   color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+li a:hover {
+  color: green;
+  border-bottom: 2px solid green;
 }
 
 p {
