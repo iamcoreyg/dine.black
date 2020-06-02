@@ -1,24 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {
+  useState, 
+  useEffect
+} from 'react';
+import axios from 'axios'
 import './App.css';
 
+const Listing = (props) => {
+  const { city, credit, link } = props.listing
+
+  return (
+    <li>
+      <a className="big" href={link}>{city}</a>
+      <span>Managed by <a href={`https://twitter.com/@${credit}`}>{credit}</a></span>
+    </li>
+  )
+}
+
 function App() {
+  const [listings, setListings] = useState();
+
+  useEffect(async () => {
+    const result = await axios(
+      'https://egtygzj8v7.execute-api.us-east-1.amazonaws.com/production/api',
+    );
+ 
+    setListings(result.data);
+  }, []);
+ 
   return (
     <div className="App">
       <p>A list of Black-owned restaurants in various cities.</p>
       <ul>
-        <li><a href="https://docs.google.com/spreadsheets/u/0/d/1cPKzlmzp-KIDEeR3IXe14lB_kzlj_acHCvWluQRN--w/htmlview#gid=0">Austin</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/u/1/d/1mTthE5lwqVnTCIm3iQtQXLyxwK-pc17cuCp--BhAYX8/htmlview">Bay Area</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1_wvyIj3w5F8XJn0leuGD5M9sAmaBKT8N2j0fEV0Df5I/edit#gid=778167218">Boston</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/18w-0RBhwBBlXDN9kRV9DVSCAGSCjtHb9K0Pq2YBv18U/htmlview?pru=AAABcpmcwrE*x3y6soEcsPyTjQ3lrCrL9w#gid=943359524">Los Angeles</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1EJz0wThvDiOuSS54FHL4qZhO7qJeEuljf01Ez3EPR8k/edit#gid=0"></a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1NiDhMfKLcAoVFQpI5g-AQH945_WpmR_bbu7OAgSU-R8/htmlview">Philedelphia</a></li>
-        <li><a href="https://docs.google.com/spreadsheets/d/1Q3C90fKE7krH4Ot-GoS5EWcnLbvtBVbedC04rjvnDxk/htmlview?pru=AAABcpUXe4k*yckyqTvB8sDY_NvIyhFL2A">New York</a></li>
-        <li><a href="https://docs.google.com/document/d/1TvvsmN0H3dfClTYuXh5qMqYCdH6o7b0bxANoDzasoKQ/edit">Maryland</a></li>
-        <li><a href="https://docs.google.com/document/d/10l7NItyZUoNroE4iLePGn5GAvSuQ7KW5IK4XmOcDSTI/mobilebasic">Toronto</a></li>
+        {
+          listings ?
+           listings.map((listing) => <Listing listing={listing} />)
+           : 'Loading...'
+        }
       </ul>
 
-      <p>Actively adding more (that I find via Twitter) but hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> if I'm missing some.</p>
+      <p>
+        Actively adding more (that I find via Twitter) but hit up <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> to submit.
+
+        Want to add updates yourself? <a href="https://docs.google.com/spreadsheets/d/1EVyWgRbpDgN2CLoe-uMWYYxnF1YODF5bBX-pNuEDGKM/edit#gid=0">Click Here</a>
+      </p>
     </div>
   );
 }

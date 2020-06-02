@@ -13,17 +13,30 @@ ul, li {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  line-height: 2;
 }
 
-li a {
+li {
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #FFF;
+}
+
+.big {
   font-size: 1.75rem;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
 }
 
-li a:hover {
+li span {
+  display: block;
+  font-size: .8rem;
+}
+
+.big:hover {
   color: green;
   border-bottom: 2px solid green;
 }
