@@ -10,10 +10,10 @@ const Listing = (props) => {
 
   return (
     <li>
-      <a className="big" href={link}>{city}</a>
+      <a className="big" href={link} target="_blank">{city}</a>
       {
         credit ? 
-        <span>Creator ~ <a href={`https://twitter.com/${credit}`}>@{credit}</a></span>
+        <span>Creator ~ <a href={`https://twitter.com/${credit}`} target="_blank">@{credit}</a></span>
         : ''
       }
     </li>
