@@ -79,7 +79,7 @@ function App() {
       </ul>
 
       <p>
-        Actively adding more but DM <a href="https://twitter.com/iamcoreyg">@iamcoreyg</a> to submit.
+        Actively adding more but DM <a href="https://twitter.com/iamcoreyg" className="twitter">@iamcoreyg</a> to submit.
         <br />
         Want to add updates yourself? <a href="https://docs.google.com/spreadsheets/d/1EVyWgRbpDgN2CLoe-uMWYYxnF1YODF5bBX-pNuEDGKM/edit#gid=0">Click Here</a>
         <br />
