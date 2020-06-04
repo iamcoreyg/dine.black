@@ -22,6 +22,8 @@ const Listing = (props) => {
 
 function App() {
   const [listings, setListings] = useState();
+  const [query, setQuery] = useState()
+  const [searchResults, setSearch] = useState();
 
   useEffect(async () => {
     const result = await axios(
@@ -30,18 +32,49 @@ function App() {
  
     setListings(result.data);
   }, []);
- 
+
+  const lookUp = (e) => {
+    setQuery(e.target.value.toLowerCase())
+
+    if (listings) {
+      const look = listings.map((directory) => {
+        if (directory && directory.city && directory.city.toLowerCase().includes(query)) {
+          return directory
+        }
+      }).filter((x) => x)
+
+      if (look.length > 0) {
+        setSearch(look)
+      } else {
+        setSearch(null)
+      }
+    }
+  }
+
+  let results;
+
+  if (query && searchResults) {
+    results = searchResults.map((listing) => <Listing listing={listing} />)
+  } else if (listings) {
+    results = listings.map((listing) => <Listing listing={listing} />)
+  }
+  
   return (
     <div className="App">
       <span className="title">DINE.BLACK</span>
       <h1>Lists of Black-owned restaurants in various cities.</h1>
       <h2>Order directly & tip generously.</h2>
 
+      <form>
+        <label className="screen-reader-only">Search</label>
+        <div>
+          <input type="text" onChange={lookUp} placeholder="Enter your city" className="search-input" />
+        </div>
+      </form>
+
       <ul class="listings">
         {
-          listings ?
-           listings.map((listing) => <Listing listing={listing} />)
-           : 'Loading...'
+          listings ? results : 'Loading...'
         }
       </ul>
 
