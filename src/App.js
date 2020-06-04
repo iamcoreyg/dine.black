@@ -72,6 +72,13 @@ function App() {
         </div>
       </form>
 
+      {
+        query && !searchResults && 
+        <p>
+          No results found. Showing all cities.
+        </p>
+      }
+
       <ul class="listings">
         {
           listings ? results : 'Loading...'
