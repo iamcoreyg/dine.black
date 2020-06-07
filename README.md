@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Some Info
+Built with create-react-app. The app is deployed via Netlify. The API endpoint that grabs all of the entries from the Google sheet is hosted on an AWS Lambda. 
 
 ## Available Scripts
 
