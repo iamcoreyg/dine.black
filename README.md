@@ -1,5 +1,7 @@
 ## Some Info
-Built with create-react-app. The app is deployed via Netlify. The API endpoint that grabs all of the entries from the Google sheet is hosted on an AWS Lambda. 
+Built with create-react-app. The app is deployed via Netlify. The API endpoint that grabs all of the entries from the Google sheet is hosted on an AWS Lambda.
+
+Google sheet: https://docs.google.com/spreadsheets/d/1EVyWgRbpDgN2CLoe-uMWYYxnF1YODF5bBX-pNuEDGKM/edit#gid=0
 
 ## Available Scripts
 
