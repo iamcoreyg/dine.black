@@ -13,7 +13,7 @@ const Listing = (props) => {
       <a className="big" href={link} target="_blank">{city}</a>
       {
         credit ?
-        <span>Creator ~ <a href={`https://${socialplatform}.com/${credit}`} target="_blank">@{credit}</a></span>
+        <span>Creator ~ <a className="creator" href={`https://${socialplatform}.com/${credit}`} target="_blank">@{credit}</a></span>
         : ''
       }
     </li>

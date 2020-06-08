@@ -47,9 +47,16 @@ li span {
   opacity: .7;
 }
 
-.big:hover {
+.big:hover,
+.big:focus {
   color: #56b63a;
   border-bottom: 2px solid #56b63a;
+}
+
+.creator:hover,
+.creator:focus {
+    color: #fce21b;
+    font-weight: bold;
 }
 
 p {
