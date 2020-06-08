@@ -56,7 +56,6 @@ li span {
 .creator:hover,
 .creator:focus {
     color: #fce21b;
-    font-weight: bold;
 }
 
 p {
