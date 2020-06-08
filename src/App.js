@@ -1,47 +1,47 @@
 import React, {
-  useState, 
+  useState,
   useEffect
 } from 'react';
 import axios from 'axios'
 import './App.css';
 
 const Listing = (props) => {
-  const { city, credit, link, socialplatform } = props.listing
+  const { city, credit, link, socialplatform } = props.listing;
 
   return (
     <li>
       <a className="big" href={link} target="_blank">{city}</a>
       {
-        credit ? 
+        credit ?
         <span>Creator ~ <a href={`https://${socialplatform}.com/${credit}`} target="_blank">@{credit}</a></span>
         : ''
       }
     </li>
   )
-}
+};
 
 function App() {
   const [listings, setListings] = useState();
-  const [query, setQuery] = useState()
+  const [query, setQuery] = useState();
   const [searchResults, setSearch] = useState();
 
   useEffect(async () => {
     const result = await axios(
       'https://egtygzj8v7.execute-api.us-east-1.amazonaws.com/production/api',
     );
- 
+
     setListings(result.data);
   }, []);
 
   const lookUp = (e) => {
-    setQuery(e.target.value.toLowerCase())
+    setQuery(e.target.value.toLowerCase());
 
     if (listings) {
       const look = listings.map((directory) => {
         if (directory && directory.city && directory.city.toLowerCase().includes(query)) {
           return directory
         }
-      }).filter((x) => x)
+      }).filter((x) => x);
 
       if (look.length > 0) {
         setSearch(look)
@@ -49,7 +49,7 @@ function App() {
         setSearch(null)
       }
     }
-  }
+  };
 
   let results;
 
@@ -58,7 +58,7 @@ function App() {
   } else if (listings) {
     results = listings.map((listing) => <Listing listing={listing} />)
   }
-  
+
   return (
     <div className="App">
       <span className="title">DINE.BLACK</span>
@@ -73,7 +73,7 @@ function App() {
       </form>
 
       {
-        query && !searchResults && 
+        query && !searchResults &&
         <p>
           No results found. Showing all cities.
         </p>
